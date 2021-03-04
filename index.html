@@ -20,29 +20,67 @@
     <title>Flexbox Website</title>
   </head>
   <body>
-    <!-- Navigation -->
-    <div class="navbar flex">
-      <!-- <img src="" alt="Logo" class="navbar__logo" /> -->
-      <h1 class="navbar__logo">Flexboxing</h1>
+    <header>
+      <!-- Navigation -->
+      <div class="navbar">
+        <div class="container flex">
+          <h1 class="navbar__logo">Flexboxing</h1>
+          <nav class="navbar__nav">
+            <ul class="navbar__list">
+              <li class="navbar__item">
+                <a href="#" class="navbar__link">Home</a>
+              </li>
+              <li class="navbar__item">
+                <a href="#" class="navbar__link">About</a>
+              </li>
+              <li class="navbar__item">
+                <a href="#" class="navbar__link">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- <img src="" alt="Logo" class="navbar__logo" /> -->
+      </div>
 
-      <nav class="navbar__nav">
-        <ul class="navbar__list">
-          <li class="navbar__item">
-            <a href="#" class="navbar__link">Home</a>
-          </li>
-          <li class="navbar__item">
-            <a href="#" class="navbar__link">About</a>
-          </li>
-          <li class="navbar__item">
-            <a href="#" class="navbar__link">Contact</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+      <!-- Showcase -->
+      <section class="showcase">
+        <div class="container flex">
+          <!-- Left Side -->
+          <div class="showcase__intro">
+            <h1 class="showcase__heading">Just playing around with Flexbox</h1>
+            <p class="showcase__text">OK - threw some Grid in here too! 😀</p>
+            <p class="showcase__text">
+              Here comes some Lorem 😉 Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Quaerat vel non nihil perferendis? Quis
+              exercitationem perferendis fuga? Cum, placeat enim?
+            </p>
+          </div>
 
-    <!-- Showcase -->
-    <section class="showcase">
-      <div class="container"></div>
-    </section>
+          <!-- Right Side -->
+          <div class="showcase__form card">
+            <h2>Yo! Fill this form out! 🙏🥺</h2>
+            <form>
+              <div class="form-control">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="What's your name?"
+                  required
+                />
+              </div>
+              <div class="form-control">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="takemyemail@email.com"
+                  required
+                />
+              </div>
+              <input type="submit" value="send" class="btn btn-primary" />
+            </form>
+          </div>
+        </div>
+      </section>
+    </header>
   </body>
 </html>

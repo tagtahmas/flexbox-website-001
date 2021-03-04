@@ -2,32 +2,13 @@
 @import "layout";
 @import "components";
 
-/* Navigation */
-// nav {
-//   width: 100%;
-//   min-height: 5rem;
-//   background: grey;
-//   display: flex;
-//   justify-content: flex-start;
-// }
+/* ===== Global Styling ===== */
+:root {
+  --color-primary: ;
+  --color-secondary: ;
+  --color-white: #fff;
+}
 
-// .logo {
-//   height: 3rem;
-//   margin: 1.5rem 3rem;
-// }
-
-// .navbar {
-//   display: flex;
-//   // justify-content: flex-end;
-//   list-style-type: none;
-// }
-
-// li {
-//   margin: 1.5rem 0.5rem;
-// }
-
-///////////////////////
-// Global Styling
 * {
   box-sizing: border-box;
   margin: 0;
@@ -35,20 +16,25 @@
 }
 
 body {
-  background: linear-gradient(to bottom right, #d74177, #ffe98a);
   min-height: 50rem;
   background-repeat: no-repeat;
+  // background: linear-gradient(to bottom right, #00b7ff, #6fd6ff);
 }
-///////////////////////
-// Navigation
+
+/* ===== Header ===== */
+header {
+  background: linear-gradient(to bottom right, #047aad, #00b7ff);
+}
+
+/* ===== Navigation ===== */
 .navbar {
-  background-color: #047aad;
+  // background-color: #047aad;
   color: white;
   height: 7rem;
   font-size: 2rem;
 
-  &.flex {
-    justify-content: space-around;
+  & .flex {
+    justify-content: space-between;
   }
 
   &__logo {
@@ -81,16 +67,75 @@ body {
   }
 }
 
-///////////////////////
-// Utilities
+/* ===== Showcase ===== */
+.showcase {
+  min-height: 50vh;
+  color: var(--color-text-primary);
+
+  /* OI: Do you need this? */
+  // & .flex {
+  //   height: inherit;
+  // }
+
+  &__intro {
+    flex: 1 1 60%;
+  }
+
+  &__heading {
+    font-size: 4rem;
+  }
+
+  &__text {
+    font-size: 2rem;
+  }
+
+  &__form {
+    flex: 1 1 30%;
+    height: 40rem;
+    // OI:
+    // justify-self: self-end;
+    & input[type="text"],
+    & input[type="email"] {
+      border: 0;
+      width: 100%;
+      padding: 0.4rem;
+      font-size: 1.6rem;
+      opacity: 0.8;
+      transition: all 0.2s;
+      border-bottom: 1px solid var(--color-primary);
+    }
+
+    & input:focus {
+      outline: 0;
+    }
+  }
+}
+
+/* ===== Utilities ===== */
+.card {
+  background-color: var(--color-white);
+  border-radius: 1.4rem;
+  padding: 2rem;
+  margin: 1rem;
+  // OI: Change to a variable!
+  color: #333;
+  box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.form-control {
+  margin: 30px 0;
+}
 
 .container {
+  max-width: 110rem;
+  margin: 0 auto;
+  // overflow: hidden;
+  // padding: 0 4rem;
 }
 
 .flex {
   display: flex;
   justify-content: center;
   align-items: center;
-  // height: 100%;
-  // align-items: center;
+  height: 100%;
 }
